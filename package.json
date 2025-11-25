@@ -4,6 +4,7 @@
   "description": "Makes the Quick Open (Ctrl + P) search scope itself to the folder of the currently opened file by prepopulating the field with the folder",
   "version": "0.0.1",
   "publisher": "DovieW",
+  "repository": "https://github.com/DovieW/vscode-quick-open-folder-based.git",
   "engines": {
     "vscode": "^1.74.0"
   },

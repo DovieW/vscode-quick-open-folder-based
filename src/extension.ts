@@ -3,6 +3,14 @@ import * as path from 'path';
 
 export function activate(context: vscode.ExtensionContext) {
     const disposable = vscode.commands.registerCommand('quickOpenFolderBased.openQuickOpen', async () => {
+        const workspaceFolders = vscode.workspace.workspaceFolders;
+
+        // Only activate when workspace has more than one folder
+        if (!workspaceFolders || workspaceFolders.length <= 1) {
+            await vscode.commands.executeCommand('workbench.action.quickOpen');
+            return;
+        }
+
         const activeEditor = vscode.window.activeTextEditor;
 
         if (!activeEditor) {

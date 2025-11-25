@@ -4,13 +4,14 @@ A VS Code extension which makes the Quick Open (Ctrl + P) search scope itself to
 
 ## Features
 
-- When you press `Ctrl+P` (or `Cmd+P` on Mac), the Quick Open dialog opens with the folder path of the currently active file prepopulated (e.g., `app/`)
+- When you press `Ctrl+P` (or `Cmd+P` on Mac) in a **multi-root workspace** (workspace with more than one folder), the Quick Open dialog opens with the folder path of the currently active file prepopulated (e.g., `app/`)
 - This overrides VS Code's "Quick Open preserve input" setting when the prepopulated folder differs from what would have been preserved
+- In single-folder workspaces or when no workspace is open, the extension falls back to normal Quick Open behavior
 
 ## Usage
 
-Simply press `Ctrl+P` (or `Cmd+P` on Mac) while editing a file. The Quick Open dialog will open with the file's folder path already filled in, allowing you to quickly search for files within the same folder.
+Simply press `Ctrl+P` (or `Cmd+P` on Mac) while editing a file in a multi-root workspace. The Quick Open dialog will open with the file's folder path already filled in, allowing you to quickly search for files within the same folder.
 
 ## Example
 
-If you're editing a file at `src/components/Button.tsx`, pressing `Ctrl+P` will open Quick Open with `src/components/` prepopulated, making it easy to find other files in the same folder.
+If you're editing a file at `src/components/Button.tsx` in a multi-root workspace, pressing `Ctrl+P` will open Quick Open with `src/components/` prepopulated, making it easy to find other files in the same folder.

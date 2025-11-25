@@ -1,0 +1,44 @@
+{
+  "name": "quick-open-folder-based",
+  "displayName": "Quick Open Folder Based",
+  "description": "Makes the Quick Open (Ctrl + P) search scope itself to the folder of the currently opened file by prepopulating the field with the folder",
+  "version": "0.0.1",
+  "publisher": "DovieW",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "quickOpenFolderBased.openQuickOpen",
+        "title": "Quick Open (Folder Based)"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "quickOpenFolderBased.openQuickOpen",
+        "key": "ctrl+p",
+        "mac": "cmd+p"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/node": "^18.x",
+    "@types/vscode": "^1.74.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.45.0",
+    "typescript": "^5.1.6"
+  }
+}

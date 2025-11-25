@@ -34,7 +34,7 @@ export function activate(context: vscode.ExtensionContext) {
         }
 
         // Normalize path separators to forward slashes and add trailing slash
-        const normalizedFolderPath = folderPath.split(path.sep).join('/') + '/';
+        const normalizedFolderPath = folderPath.replace(/\\/g, '/') + '/';
 
         // Open Quick Open with the folder path prepopulated
         await vscode.commands.executeCommand('workbench.action.quickOpen', normalizedFolderPath);
